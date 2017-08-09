@@ -17,6 +17,8 @@
       <button class="btn btn-default" (click)="doNotWarnThis()">Make it not a warning</button>-->
         <button class="btn btn-default" (click)="yellowThis()">Make it yellow</button>
           <button class="btn btn-default" (click)="doNotYellowThis()">Make it non yellow</button>
+      <button class="btn btn-default" (click)="iamredwedding()">I am redwedding</button>
+
       <!--    <button class="btn btn-default" (click)="coolThis()">Make it cool</button>
           <button class="btn btn-default" (click)="doNotCoolThis()">Make it non cool</button>
           <button class="btn-block btn-default" (click)="doNotCoolThis()">big button</button>-->
@@ -86,10 +88,32 @@
 		<path pointer-events="none" class="st10" d="M150.5 484.8v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C148.7 480.2 150.5 482.3 150.5 484.8z"/>
 		<rect x="111.8" y="473.2" pointer-events="none" class="st10" width="19.4" height="70.1"/>
 	</g>
-	<g>
+<!--	<g>
 		<rect [style.fill]="getWarning()" x="15" y="398.4" pointer-events="none" class="st11" width="139.3" height="68.1"/>
 		<path [style.fill]="getWarning()" pointer-events="none" class="st11" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
 		<rect [style.fill]="getWarning()" x="111.8" y="398.4" pointer-events="none" class="st11" width="19.4" height="68.1"/>
+	</g>-->
+  <g>
+    <g *ngIf="greyjoy">
+		<rect  x="15" y="398.4" pointer-events="none" class="st14" width="139.3" height="68.1"/>
+		<path  pointer-events="none" class="st14" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
+		<rect  x="111.8" y="398.4" pointer-events="none" class="st14" width="19.4" height="68.1"/>
+    </g>
+    <g *ngIf="greenhood">
+		<rect  x="15" y="398.4" pointer-events="none" class="st11" width="139.3" height="68.1"/>
+		<path  pointer-events="none" class="st11" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
+		<rect  x="111.8" y="398.4" pointer-events="none" class="st11" width="19.4" height="68.1"/>
+    </g>
+    <g *ngIf="redwedding">
+    <rect  x="15" y="398.4" pointer-events="none" class="st10" width="139.3" height="68.1"/>
+		<path  pointer-events="none" class="st10" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
+		<rect  x="111.8" y="398.4" pointer-events="none" class="st10" width="19.4" height="68.1"/>
+    </g>
+    <g *ngIf="yellowolf">
+    <rect  x="15" y="398.4" pointer-events="none" class="st16" width="139.3" height="68.1"/>
+		<path  pointer-events="none" class="st16" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
+		<rect  x="111.8" y="398.4" pointer-events="none" class="st16" width="19.4" height="68.1"/>
+    </g>
 	</g>
 	<text transform="matrix(0.842 0 0 1 290.7969 405.7637)" class="st12 st13"/>
 	<path pointer-events="none" class="st0" d="M308 390.1V554H157V390.1h1.8v161.1h147.4V390.1H308z"/>

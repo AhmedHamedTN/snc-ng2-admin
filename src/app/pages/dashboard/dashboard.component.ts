@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './dashboard.html',
 })
 export class Dashboard {
-  showDanger: false;
-  showWarning: false;
-  showYellow: false;
-  showCool: false;
+  showDanger: boolean = false;
+  showWarning: boolean = false;
+  showYellow: boolean = false;
+  showCool: boolean = false;
+  greenhood: boolean = false;
+  yellowolf: boolean = false;
+  redwedding: boolean = false;
+  greyjoy: boolean = true;
 
   dangerProperty: boolean = false;
   warningProperty: boolean = false;
@@ -17,6 +21,22 @@ export class Dashboard {
   constructor() {
   }
 
+
+  iamgreyjoy() {
+    this.greyjoy = true;
+  }
+
+  iamgreenhood() {
+    this.greenhood = true;
+  }
+
+  iamredwedding() {
+    this.redwedding = true;
+  }
+
+  iamyellowolf() {
+    this.yellowolf = true;
+  }
 
   getDanger() {
     if (this.showDanger) {

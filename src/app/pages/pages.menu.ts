@@ -58,7 +58,7 @@ export const PAGES_MENU = [
           }
         ]
       },
-      {
+      /*{
         path: 'charts',
         data: {
           menu: {
@@ -263,7 +263,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       {
         path: '',
         data: {

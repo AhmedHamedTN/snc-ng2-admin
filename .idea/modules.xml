@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ng2-admin.iml" filepath="$PROJECT_DIR$/.idea/ng2-admin.iml" />
+      <module fileurl="file://D:\dashboards\snc-ng2-admin\.idea\ng2-admin.iml" filepath="D:\dashboards\snc-ng2-admin\.idea\ng2-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/snc-ng2-admin.iml" filepath="$PROJECT_DIR$/.idea/snc-ng2-admin.iml" />
     </modules>
   </component>
 </project>

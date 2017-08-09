@@ -24,8 +24,8 @@ export class Register {
       'name': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       'email': ['', Validators.compose([Validators.required, EmailValidator.validate])],
       'passwords': fb.group({
-        'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
-        'repeatPassword': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
+      'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+       'repeatPassword': ['', Validators.compose([Validators.required, Validators.minLength(4)])]
       }, {validator: EqualPasswordsValidator.validate('password', 'repeatPassword')})
     });
 
