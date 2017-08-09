@@ -1,0 +1,470 @@
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <pie-chart></pie-chart>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="svg-container">
+    <button class="btn btn-default" (click)="showWarning = !showWarning;">Click to change to Warning</button>
+      <button class="btn btn-default" (click)="showCool = !showCool;">Click to change to Cool</button>
+      <button class="btn btn-default" (click)="showDanger = !showDanger;">Click to change to Danger</button>
+
+      <button class="btn btn-default" (click)="issueThis()">Make it Dangerous</button>
+    <button class="btn btn-default" (click)="doNotIssueThis()">Make it non dangerous</button>
+<!--     <button class="btn btn-default" (click)="warnThis()">Make it a warning</button>
+      <button class="btn btn-default" (click)="doNotWarnThis()">Make it not a warning</button>-->
+        <button class="btn btn-default" (click)="yellowThis()">Make it yellow</button>
+          <button class="btn btn-default" (click)="doNotYellowThis()">Make it non yellow</button>
+      <!--    <button class="btn btn-default" (click)="coolThis()">Make it cool</button>
+          <button class="btn btn-default" (click)="doNotCoolThis()">Make it non cool</button>
+          <button class="btn-block btn-default" (click)="doNotCoolThis()">big button</button>-->
+
+
+      <svg
+	xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 1366 768" xml:space="preserve">
+	<style type="text/css">
+	.st0{stroke:#000000;stroke-miterlimit:10;}
+  .st1{stroke:#000000;}
+  .st2{fill:#FFFFFF;stroke:#000000;}
+  .st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+  .st4{fill:#D8B76C;stroke:#000000;stroke-miterlimit:10;}
+  .st5{fill:#D8B76C;stroke:#000000;}
+  .st6{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+  .st7{fill:none;stroke:#000000;}
+  .st8{fill:#EAEAEA;stroke:#000000;}
+  .st9{fill:#EAEAEA;stroke:#000000;stroke-miterlimit:10;}
+  .st10{fill:#EA1E42;stroke:#000000;}
+  .st11{fill:#A0C93A;stroke:#000000;}
+  .st12{font-family:'Helvetica-Normal';}
+  .st13{font-size:10.2071px;}
+  .st14{fill:#CCCCCC;stroke:#000000;}
+  .st15{fill:#FCC03A;stroke:#000000;}
+  .st16{fill:#FFEC00;stroke:#000000;}
+  .st17{font-size:11.0288px;}
+  .st18{font-family:'MyriadPro-Regular';}
+  .st19{font-size:22px;}
+</style>
+	<path pointer-events="none" class="st0" d="M755.5 397.1v155.7h-140V397.1h2V550h136V397.1H755.5z"/>
+	<rect x="649" y="397.1" pointer-events="none" class="st1" width="106.5" height="2.8"/>
+	<rect x="617.2" y="399.9" pointer-events="none" class="st2" width="33.3" height="1.4"/>
+	<path pointer-events="none" class="st3" d="M650.6 401.3c0 12.6-3.5 24.6-9.8 33.5 -6.3 8.9-14.7 13.9-23.6 13.9v-47.4"/>
+	<g>
+		<path pointer-events="none" class="st4" d="M663.9 435.9l14.3-1.1c2.1-0.2 4.2 0.4 5.4 1.5 1 3.8 1 7.7 0 11.5 -1.2 1.1-3.3 1.7-5.4 1.5l-14.3-1.1c-1.6-0.2-2.8-1.3-3-2.6v-7C661.1 437.2 662.3 436.1 663.9 435.9zM660.6 436.2c0.2-0.3 0.8-0.5 1.3-0.4 0.6 0.1 0.9 0.4 0.7 0.7 -1.4 3.7-1.4 7.5 0 11.1 -0.1 0.2-0.4 0.4-0.8 0.5 -0.4 0.1-0.9 0-1.2-0.1C659 444.2 659 440.1 660.6 436.2M737.5 448.2l-14.4 1.1c-2.1 0.2-4.2-0.4-5.4-1.5 -1-3.8-1-7.7 0-11.5 1.2-1.1 3.3-1.7 5.4-1.5l14.4 1.1c1.6 0.2 2.8 1.3 3 2.6v7C740.3 446.9 739.1 447.9 737.5 448.2zM740.8 447.9c-0.2 0.3-0.8 0.5-1.3 0.4 -0.6-0.1-0.9-0.4-0.7-0.7 1.4-3.7 1.4-7.5 0-11.1 0.1-0.2 0.4-0.4 0.8-0.5 0.4-0.1 0.9 0 1.2 0.1C742.4 439.9 742.4 444 740.8 447.9M690.9 465l-1.8-9c-0.3-1.3 0.6-2.6 2.4-3.4 6.1-0.6 12.3-0.6 18.4 0 1.8 0.7 2.7 2 2.4 3.4l-1.8 9c-0.3 1-2 1.8-4.2 1.9H695C692.9 466.8 691.2 466 690.9 465zM691 466.2c-0.5-0.1-0.8-0.5-0.6-0.8 0.2-0.3 0.7-0.5 1.2-0.4 5.9 0.9 11.9 0.9 17.8 0 0.4 0.1 0.7 0.3 0.8 0.5 0.1 0.3 0 0.5-0.2 0.7C703.8 467.2 697.3 467.2 691 466.2M710.5 419.1l1.8 9c0.3 1.3-0.6 2.6-2.4 3.4 -6.1 0.6-12.3 0.6-18.4 0 -1.8-0.7-2.7-2-2.4-3.4l1.8-9c0.3-1 2-1.8 4.2-1.9h11.3C708.4 417.3 710.1 418.1 710.5 419.1zM710 417c0.5 0.1 0.8 0.5 0.6 0.8 -0.2 0.3-0.7 0.5-1.2 0.4 -5.9-0.9-12-0.9-17.8 0 -0.4-0.1-0.7-0.3-0.8-0.5 -0.1-0.3-0.1-0.5 0.2-0.7C697.3 416 703.8 416 710 417"/>
+		<rect x="670.9" y="423.4" pointer-events="none" class="st5" width="59.6" height="37.2"/>
+	</g>
+	<g>
+		<path pointer-events="none" class="st6" d="M662.8 534.3l-1.5-15c-0.3-2.2 0.5-4.4 1.9-5.6 5-1 10.1-1 15 0 1.5 1.2 2.2 3.4 1.9 5.6l-1.5 15c-0.3 1.7-1.7 2.9-3.4 3.1h-9.2C664.5 537.2 663.1 536 662.8 534.3zM663.2 537.7c-0.4-0.2-0.6-0.8-0.5-1.4 0.1-0.6 0.6-0.9 1-0.7 4.8 1.5 9.7 1.5 14.5 0 0.3 0.1 0.5 0.4 0.6 0.9 0.1 0.4 0 0.9-0.2 1.2C673.6 539.4 668.3 539.4 663.2 537.7"/>
+		<rect x="626" y="495.3" pointer-events="none" class="st5" width="91" height="31.1"/>
+		<rect x="661.5" y="509" pointer-events="none" class="st2" width="19.5" height="11.2"/>
+		<rect x="665" y="495.3" pointer-events="none" class="st2" width="13.6" height="12.4"/>
+		<rect x="659.1" y="496.5" pointer-events="none" class="st2" width="24.3" height="9.3"/>
+		<rect x="670.3" y="512.1" pointer-events="none" class="st7" width="9.7" height="6.2"/>
+		<rect x="662.5" y="512.1" pointer-events="none" class="st7" width="3.9" height="6.2"/>
+		<rect x="667.4" y="516.4" pointer-events="none" class="st7" width="1.9" height="1.9"/>
+		<rect x="667.4" y="512.1" pointer-events="none" class="st7" width="1.9" height="1.9"/>
+		<path pointer-events="none" class="st3" d="M683.4 498.4h-24.3"/>
+		<rect x="660.6" y="499.6" pointer-events="none" class="st7" width="21.4" height="5"/>
+		<polygon pointer-events="none" class="st2" points="628.6 522.6 656.5 500.3 658.1 502.9 630.2 525.1 "/>
+		<path pointer-events="none" class="st6" d="M632.6 519.4l1.5-4.3c0.2-0.6 0.5-1.1 0.9-1.5l12-9.5c0.5-0.3 1-0.4 1.5-0.4l4-0.2L632.6 519.4zM638.9 511.3l1.3 2M640.1 510.4l1.3 2M641.3 509.4l1.3 2M643.7 507.5l1.3 2M642.5 508.5l1.3 2"/>
+		<polygon pointer-events="none" class="st2" points="686.7 502.4 716.2 521.8 714.8 524.5 685.3 505.1 "/>
+		<path pointer-events="none" class="st6" d="M690.9 505.1l4-0.2c0.5 0 1.1 0.1 1.5 0.3l12.6 8.3c0.4 0.4 0.8 0.8 1 1.4l1.9 4.1L690.9 505.1zM700 508.2l-1.1 2.2M701.3 509.1l-1.1 2.2M702.5 509.9l-1.1 2.2M705.1 511.6l-1.1 2.2M703.8 510.7l-1.1 2.2"/>
+	</g>
+	<g transform="translate(0.5,0.5)">
+		<rect x="618.5" y="175.6" pointer-events="none" class="st8" width="136" height="175.9"/>
+		<path pointer-events="none" class="st9" d="M618.5 345.2h136M618.5 338.9h136M618.5 332.7h136M618.5 326.4h136M618.5 320.1h136M618.5 313.8h136M618.5 307.5h136M618.5 301.3h136M618.5 295h136M618.5 288.7h136M618.5 282.4h136M618.5 276.1h136M618.5 269.8h136M618.5 263.6h136M618.5 257.3h136M618.5 251h136M618.5 244.7h136M618.5 238.4h136M618.5 232.2h136M618.5 225.9h136M618.5 219.6h136M686.5 351.5V175.6M618.5 175.6l68 37.7 68-37.7M618.5 213.3h136M686.5 351.5V175.6"/>
+	</g>
+	<g>
+		<rect x="1218" y="190.1" pointer-events="none" class="st10" width="139" height="146.3"/>
+		<path pointer-events="none" class="st10" d="M1221.9 324.3v-48.9c0-2.7 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.2 3.9 4.8v48.9c0 2.7-1.7 4.8-3.9 4.8h-23.2C1223.6 329.1 1221.9 326.9 1221.9 324.3zM1221.9 251.1v-48.9c0-2.7 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.2 3.9 4.8v48.9c0 2.7-1.7 4.8-3.9 4.8h-23.2C1223.6 255.9 1221.9 253.8 1221.9 251.1z"/>
+		<rect x="1241.2" y="190.1" pointer-events="none" class="st10" width="19.3" height="146.3"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M156 390.1V554H5V390.1h1.8v161.1h147.4V390.1H156z"/>
+	<g>
+		<rect x="15" y="473.2" pointer-events="none" class="st10" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st10" d="M150.5 484.8v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C148.7 480.2 150.5 482.3 150.5 484.8z"/>
+		<rect x="111.8" y="473.2" pointer-events="none" class="st10" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect [style.fill]="getWarning()" x="15" y="398.4" pointer-events="none" class="st11" width="139.3" height="68.1"/>
+		<path [style.fill]="getWarning()" pointer-events="none" class="st11" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
+		<rect [style.fill]="getWarning()" x="111.8" y="398.4" pointer-events="none" class="st11" width="19.4" height="68.1"/>
+	</g>
+	<text transform="matrix(0.842 0 0 1 290.7969 405.7637)" class="st12 st13"/>
+	<path pointer-events="none" class="st0" d="M308 390.1V554H157V390.1h1.8v161.1h147.4V390.1H308z"/>
+	<g [style.fill]="getWarning()">
+		<rect x="167" y="473.2" pointer-events="none" class="st14" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st14" d="M302.5 484.8v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C300.7 480.2 302.5 482.3 302.5 484.8z"/>
+		<rect x="263.8" y="473.2" pointer-events="none" class="st14" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect x="167" y="398.4" pointer-events="none" class="st14" width="139.3" height="68.1"/>
+		<path pointer-events="none" class="st14" d="M302.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C300.7 405.2 302.5 407.2 302.5 409.6z"/>
+		<rect x="263.8" y="398.4" pointer-events="none" class="st14" width="19.4" height="68.1"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M460 390.1V554H309V390.1h1.8v161.1h147.4V390.1H460z"/>
+	<g>
+		<rect x="319" y="473.2" pointer-events="none" class="st10" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st10" d="M454.5 484.8v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C452.7 480.2 454.5 482.3 454.5 484.8z"/>
+		<rect x="415.8" y="473.2" pointer-events="none" class="st10" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect x="319" y="398.4" pointer-events="none" class="st14" width="139.3" height="68.1"/>
+		<path pointer-events="none" class="st14" d="M454.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C452.7 405.2 454.5 407.2 454.5 409.6z"/>
+		<rect x="415.8" y="398.4" pointer-events="none" class="st14" width="19.4" height="68.1"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M612 390.1V554H461V390.1h1.8v161.1h147.4V390.1H612z"/>
+	<g>
+		<rect x="471" y="473.2" pointer-events="none" class="st14" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st14" d="M606.5 484.8v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C604.7 480.2 606.5 482.3 606.5 484.8z"/>
+		<rect x="567.8" y="473.2" pointer-events="none" class="st14" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect [ngClass]="setClasses()" x="471" y="398.4" pointer-events="none" class="st15" width="139.3" height="68.1"/>
+		<path [ngClass]="setClasses()" pointer-events="none" class="st15" d="M606.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C604.7 405.2 606.5 407.2 606.5 409.6z"/>
+		<rect [ngClass]="setClasses()" x="567.8" y="398.4" pointer-events="none" class="st15" width="19.4" height="68.1"/>
+	</g>
+	<text transform="matrix(0.842 0 0 1 892.7969 403.3887)" class="st12 st13"/>
+	<path pointer-events="none" class="st0" d="M910 387.7v163.9H759V387.7h1.8v161.1h147.4V387.7H910z"/>
+	<g>
+		<rect x="769" y="470.9" pointer-events="none" class="st14" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st14" d="M904.5 482.4v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C902.7 477.9 904.5 479.9 904.5 482.4z"/>
+		<rect x="865.8" y="470.9" pointer-events="none" class="st14" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect x="769" y="398" pointer-events="none" class="st11" width="139.3" height="68.1"/>
+		<path pointer-events="none" class="st11" d="M904.5 409.3v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C902.7 404.8 904.5 406.8 904.5 409.3z"/>
+		<rect x="865.8" y="398" pointer-events="none" class="st11" width="19.4" height="68.1"/>
+	</g>
+	<text transform="matrix(0.842 0 0 1 1044.7969 403.3887)" class="st12 st13"/>
+	<path pointer-events="none" class="st0" d="M1062 387.7v163.9H911V387.7h1.8v161.1h147.4V387.7H1062z"/>
+	<g>
+		<rect x="921" y="470.9" pointer-events="none" class="st15" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st15" d="M1056.5 482.4v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C1054.7 477.9 1056.5 479.9 1056.5 482.4z"/>
+		<rect x="1017.8" y="470.9" pointer-events="none" class="st15" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect x="921" y="396" pointer-events="none" class="st14" width="139.3" height="68.1"/>
+		<path pointer-events="none" class="st14" d="M1056.5 407.3v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C1054.7 402.8 1056.5 404.8 1056.5 407.3z"/>
+		<rect x="1017.8" y="396" pointer-events="none" class="st14" width="19.4" height="68.1"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M1214 387.7v163.9h-151V387.7h1.8v161.1h147.4V387.7H1214z"/>
+	<g>
+		<rect x="1073" y="470.9" pointer-events="none" class="st14" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st14" d="M1208.5 482.4v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C1206.7 477.9 1208.5 479.9 1208.5 482.4z"/>
+		<rect x="1169.8" y="470.9" pointer-events="none" class="st14" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect [style.fill]="getCool()" x="1073" y="396" pointer-events="none" class="st10" width="139.3" height="68.1"/>
+		<path [style.fill]="getCool()" pointer-events="none" class="st10" d="M1208.5 407.3v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C1206.7 402.8 1208.5 404.8 1208.5 407.3z"/>
+		<rect [style.fill]="getCool()" x="1169.8" y="396" pointer-events="none" class="st10" width="19.4" height="68.1"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M1366 387.7v163.9h-151V387.7h1.8v161.1h147.4V387.7H1366z"/>
+	<g>
+		<rect x="1225" y="470.9" pointer-events="none" class="st11" width="139.3" height="70.1"/>
+		<path pointer-events="none" class="st11" d="M1360.5 482.4v47c0 2.5-1.7 4.5-3.9 4.5h-23.2c-2.1 0-3.9-2-3.9-4.5v-47c0-2.5 1.7-4.5 3.9-4.5h23.2C1358.7 477.9 1360.5 479.9 1360.5 482.4z"/>
+		<rect x="1321.8" y="470.9" pointer-events="none" class="st11" width="19.4" height="70.1"/>
+	</g>
+	<g>
+		<rect x="1225" y="396" pointer-events="none" class="st14" width="139.3" height="68.1"/>
+		<path pointer-events="none" class="st14" d="M1360.5 407.3v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C1358.7 402.8 1360.5 404.8 1360.5 407.3z"/>
+		<rect x="1321.8" y="396" pointer-events="none" class="st14" width="19.4" height="68.1"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M1212 351.8V174.7h151v177.1h-1.8V177.7h-147.4v174.1H1212z"/>
+	<g>
+		<rect x="11" y="190.1" pointer-events="none" class="st16" width="139" height="146.3"/>
+		<path pointer-events="none" class="st16" d="M14.9 324.3v-48.9c0-2.7 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.2 3.9 4.8v48.9c0 2.7-1.7 4.8-3.9 4.8H18.7C16.6 329.1 14.9 326.9 14.9 324.3zM14.9 251.1v-48.9c0-2.7 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.2 3.9 4.8v48.9c0 2.7-1.7 4.8-3.9 4.8H18.7C16.6 255.9 14.9 253.8 14.9 251.1z"/>
+		<rect x="34.2" y="190.1" pointer-events="none" class="st16" width="19.3" height="146.3"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M5 351.8V174.7h151v177.1h-1.8V177.7H6.8v174.1H5z"/>
+	<text transform="matrix(-0.7793 0 0 -1 174.3242 334.874)" class="st12 st17"/>
+	<path pointer-events="none" class="st0" d="M157.1 351.8V174.7h151v177.1h-1.8V177.7H158.9v174.1H157.1z"/>
+	<g>
+		<rect x="158.8" y="186.3" pointer-events="none" class="st14" width="139.3" height="75.7"/>
+		<path pointer-events="none" class="st14" d="M162.6 249.5v-50.8c0-2.7 1.7-4.9 3.9-4.9h23.2c2.1 0 3.9 2.2 3.9 4.9v50.8c0 2.7-1.7 4.9-3.9 4.9h-23.2C164.4 254.4 162.6 252.2 162.6 249.5z"/>
+		<rect x="182" y="186.3" pointer-events="none" class="st14" width="19.4" height="75.7"/>
+	</g>
+	<g>
+		<rect x="158.8" y="269.2" pointer-events="none" class="st14" width="139.3" height="73.6"/>
+		<path pointer-events="none" class="st14" d="M162.6 330.7v-49.3c0-2.6 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.1 3.9 4.8v49.3c0 2.6-1.7 4.8-3.9 4.8h-23.2C164.4 335.5 162.6 333.3 162.6 330.7z"/>
+		<rect x="182" y="269.2" pointer-events="none" class="st14" width="19.4" height="73.6"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M309.1 351.8V174.7h151v177.1h-1.8V177.7H310.9v174.1H309.1z"/>
+	<g>
+		<rect x="310.8" y="186.3" pointer-events="none" class="st16" width="139.3" height="75.7"/>
+		<path pointer-events="none" class="st16" d="M314.6 249.5v-50.8c0-2.7 1.7-4.9 3.9-4.9h23.2c2.1 0 3.9 2.2 3.9 4.9v50.8c0 2.7-1.7 4.9-3.9 4.9h-23.2C316.4 254.4 314.6 252.2 314.6 249.5z"/>
+		<rect x="334" y="186.3" pointer-events="none" class="st16" width="19.4" height="75.7"/>
+	</g>
+	<g>
+		<rect x="310.8" y="269.2" pointer-events="none" class="st10" width="139.3" height="73.6"/>
+		<path pointer-events="none" class="st10" d="M314.6 330.7v-49.3c0-2.6 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.1 3.9 4.8v49.3c0 2.6-1.7 4.8-3.9 4.8h-23.2C316.4 335.5 314.6 333.3 314.6 330.7z"/>
+		<rect x="334" y="269.2" pointer-events="none" class="st10" width="19.4" height="73.6"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M461.1 351.8V174.7h151v177.1h-1.8V177.7H462.9v174.1H461.1z"/>
+	<g>
+		<rect x="462.8" y="186.3" pointer-events="none" class="st14" width="139.3" height="75.7"/>
+		<path pointer-events="none" class="st14" d="M466.6 249.5v-50.8c0-2.7 1.7-4.9 3.9-4.9h23.2c2.1 0 3.9 2.2 3.9 4.9v50.8c0 2.7-1.7 4.9-3.9 4.9h-23.2C468.4 254.4 466.6 252.2 466.6 249.5z"/>
+		<rect x="486" y="186.3" pointer-events="none" class="st14" width="19.4" height="75.7"/>
+	</g>
+	<g>
+		<rect x="462.8" y="269.2" pointer-events="none" class="st14" width="139.3" height="73.6"/>
+		<path pointer-events="none" class="st14" d="M466.6 330.7v-49.3c0-2.6 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.1 3.9 4.8v49.3c0 2.6-1.7 4.8-3.9 4.8h-23.2C468.4 335.5 466.6 333.3 466.6 330.7z"/>
+		<rect x="486" y="269.2" pointer-events="none" class="st14" width="19.4" height="73.6"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M759.1 351.8V174.7h151v177.1h-1.8V177.7H760.9v174.1H759.1z"/>
+	<g>
+		<rect x="760.8" y="186.3" pointer-events="none" class="st10" width="139.3" height="75.7"/>
+		<path pointer-events="none" class="st10" d="M764.6 249.5v-50.8c0-2.7 1.7-4.9 3.9-4.9h23.2c2.1 0 3.9 2.2 3.9 4.9v50.8c0 2.7-1.7 4.9-3.9 4.9h-23.2C766.4 254.4 764.6 252.2 764.6 249.5z"/>
+		<rect x="784" y="186.3" pointer-events="none" class="st10" width="19.4" height="75.7"/>
+	</g>
+	<g>
+		<rect x="760.8" y="269.2" pointer-events="none" class="st14" width="139.3" height="73.6"/>
+		<path pointer-events="none" class="st14" d="M764.6 330.7v-49.3c0-2.6 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.1 3.9 4.8v49.3c0 2.6-1.7 4.8-3.9 4.8h-23.2C766.4 335.5 764.6 333.3 764.6 330.7z"/>
+		<rect x="784" y="269.2" pointer-events="none" class="st14" width="19.4" height="73.6"/>
+	</g>
+	<text transform="matrix(-0.7793 0 0 -1 927.3242 334.874)" class="st12 st17"/>
+	<path pointer-events="none" class="st0" d="M910.1 351.8V174.7h151v177.1h-1.8V177.7H911.9v174.1H910.1z"/>
+	<g>
+		<rect x="911.8" y="186.3" pointer-events="none" class="st14" width="139.3" height="75.7"/>
+		<path pointer-events="none" class="st14" d="M915.6 249.5v-50.8c0-2.7 1.7-4.9 3.9-4.9h23.2c2.1 0 3.9 2.2 3.9 4.9v50.8c0 2.7-1.7 4.9-3.9 4.9h-23.2C917.4 254.4 915.6 252.2 915.6 249.5z"/>
+		<rect x="935" y="186.3" pointer-events="none" class="st14" width="19.4" height="75.7"/>
+	</g>
+	<g>
+		<rect x="911.8" y="269.2" pointer-events="none" class="st14" width="139.3" height="73.6"/>
+		<path pointer-events="none" class="st14" d="M915.6 330.7v-49.3c0-2.6 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.1 3.9 4.8v49.3c0 2.6-1.7 4.8-3.9 4.8h-23.2C917.4 335.5 915.6 333.3 915.6 330.7z"/>
+		<rect x="935" y="269.2" pointer-events="none" class="st14" width="19.4" height="73.6"/>
+	</g>
+	<path pointer-events="none" class="st0" d="M1061.1 351.8V174.7h151v177.1h-1.8V177.7h-147.4v174.1H1061.1z"/>
+	<g>
+		<rect x="1062.8" y="186.3" pointer-events="none" class="st10" width="139.3" height="75.7"/>
+		<path pointer-events="none" class="st10" d="M1066.6 249.5v-50.8c0-2.7 1.7-4.9 3.9-4.9h23.2c2.1 0 3.9 2.2 3.9 4.9v50.8c0 2.7-1.7 4.9-3.9 4.9h-23.2C1068.4 254.4 1066.6 252.2 1066.6 249.5z"/>
+		<rect x="1086" y="186.3" pointer-events="none" class="st10" width="19.4" height="75.7"/>
+	</g>
+	<g>
+		<rect x="1062.8" y="269.2" pointer-events="none" class="st14" width="139.3" height="73.6"/>
+		<path pointer-events="none" class="st14" d="M1066.6 330.7v-49.3c0-2.6 1.7-4.8 3.9-4.8h23.2c2.1 0 3.9 2.1 3.9 4.8v49.3c0 2.6-1.7 4.8-3.9 4.8h-23.2C1068.4 335.5 1066.6 333.3 1066.6 330.7z"/>
+		<rect x="1086" y="269.2" pointer-events="none" class="st14" width="19.4" height="73.6"/>
+	</g>
+	<text transform="matrix(1.1689 0 0 1 57.1226 168.7988)" class="st18 st19">101</text>
+	<text transform="matrix(1.1689 0 0 1 214.1226 168.7988)" class="st18 st19">103</text>
+	<text transform="matrix(1.1689 0 0 1 366.1226 168.7988)" class="st18 st19">105</text>
+	<text transform="matrix(1.1689 0 0 1 510.1226 168.7988)" class="st18 st19">107</text>
+	<text transform="matrix(1.1689 0 0 1 816.123 168.7988)" class="st18 st19">109</text>
+	<text transform="matrix(1.1689 0 0 1 967.123 168.7988)" class="st18 st19">111</text>
+	<text transform="matrix(1.1689 0 0 1 1118.123 168.7988)" class="st18 st19">113</text>
+	<text transform="matrix(1.1689 0 0 1 1273.123 168.7988)" class="st18 st19">115</text>
+	<text transform="matrix(1.1689 0 0 1 62.1226 570.7344)" class="st18 st19">102</text>
+	<text transform="matrix(1.1689 0 0 1 210.1226 570.7344)" class="st18 st19">104</text>
+	<text transform="matrix(1.1689 0 0 1 358.1226 570.7344)" class="st18 st19">106</text>
+	<text transform="matrix(1.1689 0 0 1 510.1226 570.7344)" class="st18 st19">108</text>
+	<text transform="matrix(1.1689 0 0 1 812.123 570.7344)" class="st18 st19">110</text>
+	<text transform="matrix(1.1689 0 0 1 963.123 570.7344)" class="st18 st19">112</text>
+	<text transform="matrix(1.1689 0 0 1 1114.123 570.7344)" class="st18 st19">114</text>
+	<text transform="matrix(1.1689 0 0 1 1265.123 570.7344)" class="st18 st19">116</text>
+</svg>
+
+
+
+<!--
+      <svg
+	xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 1366 768" xml:space="preserve">
+	<style type="text/css">
+	.st0{fill:#F4F4F4;}
+  .st1{fill:#8C8C8C;}
+  .st2{fill:#FCC03A;}
+  .st3{fill:#EA1E42;}
+  .st4{fill:#A0C93A;}
+  .st5{fill:#FFFFFF;}
+  .st6{font-family:'MyriadPro-Regular';}
+  .st7{font-size:21px;}
+  .st8{fill:#FFFFFF;stroke:#4D4D4D;stroke-width:2;stroke-miterlimit:10;}
+  .st9{font-size:14.801px;}
+  .st10{fill-rule:evenodd;clip-rule:evenodd;fill:#EA1E42;}
+  .st11{font-family:'MyriadPro-Bold';}
+  .st12{fill:#E8E8E8;}
+  .st13{font-family:'Helvetica-Normal';}
+  .st14{font-size:38.5909px;}
+  .st15{fill-rule:evenodd;clip-rule:evenodd;fill:#FCC03A;}
+  .st16{fill-rule:evenodd;clip-rule:evenodd;fill:#A0C93A;}
+  .st17{font-size:14px;}
+</style>
+	<rect id="sth" x="36" y="407.1" transform="matrix(0.9998 -1.756240e-02 1.756240e-02 0.9998 -7.9383 5.3223)" class="st0" width="526.1" height="95"/>
+	<rect x="36" y="228" class="st0" width="526" height="90"/>
+	<rect id="c1" [style.fill]="getStyle()" x="46" y="235" class="st1" width="98" height="74"/>
+	<rect x="313" y="273" class="st2" width="98" height="36"/>
+	<rect id="c2" [style.fill]="getStyle()" x="179" y="235" class="st3" width="98" height="74"/>
+	<rect [style.fill]="getStyle()" x="452" y="235" class="st1" width="98" height="74"/>
+	<rect x="45" y="418" class="st4" width="98" height="74"/>
+
+	<rect
+    [ngClass]="setClasses()"
+    x="312" y="418" class="st1" width="98" height="74"/>
+
+	<rect
+    x="178" y="419" class="st2" width="98" height="37"/>
+	<rect x="451" y="418" class="st3" width="98" height="74"/>
+	<text transform="matrix(1 0 0 1 88.6807 299.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 88.6807 254.2554)" class="st5 st6 st7">F</text>
+	<text transform="matrix(1 0 0 1 222.6807 299.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 356.6807 299.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 496.6807 299.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 496.6807 254.2554)" class="st5 st6 st7">F</text>
+	<text transform="matrix(1 0 0 1 88.6807 438.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 222.6807 438.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 356.6807 483.2554)" class="st5 st6 st7">F</text>
+	<text transform="matrix(1 0 0 1 356.6807 438.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 496.6807 441.2554)" class="st5 st6 st7">P</text>
+	<line class="st8" x1="46" y1="272" x2="144" y2="272"/>
+	<line class="st8" x1="313" y1="272" x2="411" y2="272"/>
+	<line class="st8" x1="452" y1="272" x2="550" y2="272"/>
+	<line class="st8" x1="178" y1="457" x2="276" y2="457"/>
+	<line class="st8" x1="312" y1="457" x2="410" y2="457"/>
+	<text transform="matrix(1 0 0 1 409.1113 397.7764)" class="st5 st6 st9">11’’</text>
+	<rect x="794" y="405" class="st0" width="526" height="95"/>
+	<rect x="794" y="226" class="st0" width="526" height="90"/>
+	<rect x="806" y="271" class="st1" width="98" height="36"/>
+	<rect x="1073" y="271" class="st1" width="98" height="36"/>
+	<rect x="1210" y="233" class="st3" width="98" height="74"/>
+	<rect x="939" y="271" class="st3" width="98" height="36"/>
+	<rect x="805" y="416" class="st4" width="98" height="74"/>
+	<rect x="1072" y="416" class="st1" width="98" height="74"/>
+	<rect x="938" y="416" class="st3" width="98" height="37"/>
+	<rect x="1211" y="416" class="st2" width="98" height="74"/>
+	<text transform="matrix(1 0 0 1 848.6807 297.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 1256.6807 299.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 1116.6807 297.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 983.6807 297.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 848.6807 436.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 982.6807 436.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 1116.6807 481.2554)" class="st5 st6 st7">F</text>
+	<text transform="matrix(1 0 0 1 1116.6807 436.2554)" class="st5 st6 st7">P</text>
+	<text transform="matrix(1 0 0 1 1256.6807 439.2554)" class="st5 st6 st7">P</text>
+	<line class="st8" x1="806" y1="270" x2="904" y2="270"/>
+	<line class="st8" x1="1073" y1="270" x2="1171" y2="270"/>
+	<line class="st8" x1="939" y1="270" x2="1037" y2="270"/>
+	<line class="st8" x1="938" y1="455" x2="1036" y2="455"/>
+	<line class="st8" x1="1072" y1="455" x2="1170" y2="455"/>
+	<path class="st10" d="M1303.9 354.5h-24.5c-0.6 0-1-0.4-1-0.9v-27.1c0-0.5 0.5-0.9 1-0.9h24.5c0.6 0 1 0.4 1 0.9v27.1C1305 354.1 1304.5 354.5 1303.9 354.5L1303.9 354.5z"/>
+	<text transform="matrix(1.0303 0 0 1 1279.2363 343.7764)" class="st5 st11 st9">22’’</text>
+	<polygon class="st10" points="1279.4 324.5 1304.4 324.5 1298.4 319 1291.8 313 1285.3 319 "/>
+	<text transform="matrix(1 0 0 1 1169.1113 395.7764)" class="st5 st6 st9">25’’</text>
+	<rect x="313" y="234" class="st1" width="98" height="36"/>
+	<text transform="matrix(1 0 0 1 356.6807 257.2554)" class="st5 st6 st7">F</text>
+	<rect x="806" y="232" class="st4" width="98" height="36"/>
+	<text transform="matrix(1 0 0 1 848.6807 255.2554)" class="st5 st6 st7">F</text>
+	<rect x="1073" y="233" class="st1" width="98" height="36"/>
+	<text transform="matrix(1 0 0 1 1116.6807 252.2554)" class="st5 st6 st7">F</text>
+	<rect x="938" y="456" class="st1" width="98" height="37"/>
+	<text transform="matrix(1 0 0 1 982.6807 481.2554)" class="st5 st6 st7">F</text>
+	<rect x="178" y="458" class="st1" width="98" height="37"/>
+	<text transform="matrix(1 0 0 1 222.6807 483.2554)" class="st5 st6 st7">F</text>
+	<circle class="st12" cx="677.7" cy="376.7" r="89.3"/>
+	<text transform="matrix(1 0 0 1 622.6675 386.7422)" class="st13 st14">DESK</text>
+	<path class="st10" d="M964.9 351.5h-24.5c-0.6 0-1-0.4-1-0.9v-27.1c0-0.5 0.5-0.9 1-0.9h24.5c0.6 0 1 0.4 1 0.9v27.1C966 351.1 965.5 351.5 964.9 351.5L964.9 351.5z"/>
+	<polygon class="st10" points="940.4 321.5 965.4 321.5 959.4 316 952.8 310 946.3 316 "/>
+	<text transform="matrix(1.0303 0 0 1 940.2363 340.7764)" class="st5 st11 st9">16’’</text>
+	<rect x="939" y="233" class="st1" width="98" height="36"/>
+	<text transform="matrix(1 0 0 1 983.6807 252.2554)" class="st5 st6 st7">F</text>
+	<path class="st10" d="M1010.4 370h24.5c0.6 0 1 0.4 1 0.9V398c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C1009.4 370.4 1009.9 370 1010.4 370L1010.4 370z"/>
+	<text transform="matrix(1.0303 0 0 1 1011.2363 390.7764)" class="st5 st11 st9">18’’</text>
+	<polygon class="st10" points="1035 400 1010 400 1015.9 405.4 1022.5 411.5 1029.1 405.4 "/>
+	<path class="st10" d="M204.9 353.5h-24.5c-0.6 0-1-0.4-1-0.9v-27.1c0-0.5 0.5-0.9 1-0.9h24.5c0.6 0 1 0.4 1 0.9v27.1C206 353.1 205.5 353.5 204.9 353.5L204.9 353.5z"/>
+	<polygon class="st10" points="180.4 323.5 205.4 323.5 199.4 318 192.8 312 186.3 318 "/>
+	<text transform="matrix(1.0303 0 0 1 180.2363 342.7764)" class="st5 st11 st9">16’’</text>
+	<path class="st15" d="M250.4 375h24.5c0.6 0 1 0.4 1 0.9V403c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C249.4 375.4 249.9 375 250.4 375L250.4 375z"/>
+	<text transform="matrix(1.0303 0 0 1 255.2363 395.7764)" class="st5 st11 st9">8’’</text>
+	<polygon class="st15" points="275 405 250 405 255.9 410.4 262.5 416.5 269.1 410.4 "/>
+	<path class="st15" d="M407.9 353.5h-24.5c-0.6 0-1-0.4-1-0.9v-27.1c0-0.5 0.5-0.9 1-0.9h24.5c0.6 0 1 0.4 1 0.9v27.1C409 353.1 408.5 353.5 407.9 353.5L407.9 353.5z"/>
+	<polygon class="st15" points="383.4 323.5 408.4 323.5 402.4 318 395.8 312 389.3 318 "/>
+	<text transform="matrix(1.0303 0 0 1 383.2363 343.7764)" class="st5 st11 st9">11’’</text>
+	<path class="st10" d="M522.4 370h24.5c0.6 0 1 0.4 1 0.9V398c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C521.4 370.4 521.9 370 522.4 370L522.4 370z"/>
+	<text transform="matrix(1.0303 0 0 1 523.2363 390.7764)" class="st5 st11 st9">23’’</text>
+	<polygon class="st10" points="547 400 522 400 527.9 405.4 534.5 411.5 541.1 405.4 "/>
+	<path class="st15" d="M1212.4 371.5h24.5c0.6 0 1 0.4 1 0.9v27.1c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C1211.4 371.9 1211.9 371.5 1212.4 371.5L1212.4 371.5z"/>
+	<text transform="matrix(1.0303 0 0 1 1217.2668 392.2764)" class="st5 st11 st9">8’’</text>
+	<polygon class="st15" points="1237 401.5 1212 401.5 1218 406.9 1224.5 413 1231.1 406.9 "/>
+	<path class="st16" d="M877.4 370.5H902c0.6 0 1 0.4 1 0.9v27.1c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C876.4 370.9 876.9 370.5 877.4 370.5L877.4 370.5z"/>
+	<text transform="matrix(1.0303 0 0 1 882.2668 391.2764)" class="st5 st11 st9">3’’</text>
+	<polygon class="st16" points="902 400.5 877 400.5 883 405.9 889.5 412 896.1 405.9 "/>
+	<path class="st16" d="M877.4 188.5H902c0.6 0 1 0.4 1 0.9v27.1c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C876.4 188.9 876.9 188.5 877.4 188.5L877.4 188.5z"/>
+	<text transform="matrix(1.0303 0 0 1 882.2668 209.2764)" class="st5 st11 st9">2’’</text>
+	<polygon class="st16" points="902 218.5 877 218.5 883 223.9 889.5 230 896.1 223.9 "/>
+	<path class="st16" d="M117.4 374.5H142c0.6 0 1 0.4 1 0.9v27.1c0 0.5-0.5 0.9-1 0.9h-24.5c-0.6 0-1-0.4-1-0.9v-27.1C116.4 374.9 116.9 374.5 117.4 374.5L117.4 374.5z"/>
+	<text transform="matrix(1.0303 0 0 1 122.2668 395.2764)" class="st5 st11 st9">3’’</text>
+	<polygon class="st16" points="142 404.5 117 404.5 123 409.9 129.5 416 136.1 409.9 "/>
+	<text transform="matrix(1 0 0 1 39 221)" class="st13 st17">101   </text>
+	<text transform="matrix(1 0 0 1 179 221)" class="st13 st17">103   </text>
+	<text transform="matrix(1 0 0 1 312 221)" class="st13 st17">105   </text>
+	<text transform="matrix(1 0 0 1 451 221)" class="st13 st17">107   </text>
+	<text transform="matrix(1 0 0 1 45 399)" class="st13 st17">102  </text>
+	<text transform="matrix(1 0 0 1 182 397)" class="st13 st17">104   </text>
+	<text transform="matrix(1 0 0 1 313 395)" class="st13 st17">106   </text>
+	<text transform="matrix(1 0 0 1 451 395)" class="st13 st17">108  </text>
+	<text transform="matrix(1 0 0 1 794 219)" class="st13 st17">109   </text>
+	<text transform="matrix(1 0 0 1 940 221)" class="st13 st17">111   </text>
+	<text transform="matrix(1 0 0 1 1077 221)" class="st13 st17">113   </text>
+	<text transform="matrix(1 0 0 1 1211 221)" class="st13 st17">115   </text>
+	<text transform="matrix(1 0 0 1 1288 399)" class="st13 st17">116   </text>
+	<text transform="matrix(1 0 0 1 1146 401)" class="st13 st17">114   </text>
+	<text transform="matrix(1 0 0 1 939 399)" class="st13 st17">112   </text>
+	<text transform="matrix(1 0 0 1 797 399)" class="st13 st17">110   </text>
+</svg>
+-->
+</div>
+  </div>
+</div>
+
+<!--<div class="row">
+  <ba-card class="col-sm-12" cardTitle="dashboard.todo_list"
+           baCardClass="xmedium-card feed-comply-panel with-scroll todo-panel">
+    <todo></todo>
+  </ba-card>
+</div>-->
+
+
+<!--<div class="row">
+  <ba-card class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-12"
+                     cardTitle="dashboard.acquisition_channels" baCardClass="traffic-panel medium-card">
+    <traffic-chart></traffic-chart>
+  </ba-card>
+
+  <ba-card class="col-xlg-6 col-xl-6 col-lg-12 col-sm-12 col-12"
+           cardTitle="dashboard.users_by_country" baCardClass="medium-card">
+    <users-map></users-map>
+  </ba-card>
+</div>-->
+
+<!--<div class="row">
+  <div class="col-xlg-9 col-xl-6 col-lg-6  col-md-12 col-sm-12 col-12">
+    <div class="row">
+      <ba-card class="col-xlg-8 col-xl-12 col-lg-12 col-md-7 col-sm-12 col-12"
+               cardTitle="dashboard.revenue" baCardClass="medium-card">
+        <line-chart></line-chart>
+      </ba-card>
+      <ba-card class="col-xlg-4 col-xl-12 col-lg-12 col-md-5 col-sm-12 col-12"
+               baCardClass="popular-app medium-card">
+        <popular-app></popular-app>
+      </ba-card>
+    </div>
+  </div>
+
+  <div class="col-xlg-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+    <ba-card cardTitle="dashboard.feed"
+             baCardClass="large-card with-scroll feed-panel">
+      <feed></feed>
+    </ba-card>
+  </div>
+
+</div>-->
+
+<!--<div class="row shift-up">
+  <ba-card class="col-xlg-3 col-lg-6 col-md-12 col-sm-12 col-12" cardTitle="dashboard.todo_list"
+           baCardClass="xmedium-card feed-comply-panel with-scroll todo-panel">
+    <todo></todo>
+  </ba-card>
+  <ba-card class="col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-12" cardTitle="dashboard.calendar"
+           baCardClass="xmedium-card feed-comply-panel with-scroll calendar-panel">
+    <calendar></calendar>
+  </ba-card>
+</div>-->

@@ -1,0 +1,27 @@
+#tree-view .tree {
+  & .node-value {
+    color: black;
+  }
+  & .folding {
+    &.node-expanded::before {
+      color: black;
+    }
+    &.node-collapsed::before  {
+      color: white;
+    }
+    &.node-leaf::before {
+      color: white;
+    }
+  }
+  & .over-drop-target {
+    border: 4px solid ghostwhite;
+  }
+  & .node-value{
+    & .node-selected::after {
+      background-color: white;
+    }
+    &:after {
+      background-color: white;
+    }
+  }
+}
