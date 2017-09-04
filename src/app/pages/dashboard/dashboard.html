@@ -7,23 +7,64 @@
 <div class="row">
   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="svg-container">
-    <button class="btn btn-default" (click)="showWarning = !showWarning;">Click to change to Warning</button>
+<!--    <button class="btn btn-default" (click)="showWarning = !showWarning;">Click to change to Warning</button>
       <button class="btn btn-default" (click)="showCool = !showCool;">Click to change to Cool</button>
       <button class="btn btn-default" (click)="showDanger = !showDanger;">Click to change to Danger</button>
 
       <button class="btn btn-default" (click)="issueThis()">Make it Dangerous</button>
-    <button class="btn btn-default" (click)="doNotIssueThis()">Make it non dangerous</button>
+    <button class="btn btn-default" (click)="doNotIssueThis()">Make it non dangerous</button>-->
 <!--     <button class="btn btn-default" (click)="warnThis()">Make it a warning</button>
       <button class="btn btn-default" (click)="doNotWarnThis()">Make it not a warning</button>-->
-        <button class="btn btn-default" (click)="yellowThis()">Make it yellow</button>
-          <button class="btn btn-default" (click)="doNotYellowThis()">Make it non yellow</button>
-      <button class="btn btn-default" (click)="iamredwedding()">I am redwedding</button>
+<!--        <button class="btn btn-default" (click)="yellowThis()">Make it yellow</button>
+          <button class="btn btn-default" (click)="doNotYellowThis()">Make it non yellow</button>-->
+      <div class="row">
+      <ba-card class="col-md-6 col-sm-12 col-12">
+        <div #chart></div>
+      </ba-card>
+      <ba-card class="col-md-6 col-sm-12 col-12">
+        <div #chart2></div>
+      </ba-card>
+      </div>
+
+      <div class="row">
+        <ba-card class="col-md-12 col-sm-12 col-12">
+          <div #chartArea style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </ba-card>
+      </div>
+
+
+<!--      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="width:60%" id="container">
+      </div>-->
+
+
 
       <!--    <button class="btn btn-default" (click)="coolThis()">Make it cool</button>
           <button class="btn btn-default" (click)="doNotCoolThis()">Make it non cool</button>
           <button class="btn-block btn-default" (click)="doNotCoolThis()">big button</button>-->
 
 
+<!--      <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="single"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [showGridLines]="showGridLines"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+      </ngx-charts-bar-vertical>-->
+      <hr>
+      <h1> This demonstrates the change in the color of the rooms per urgency</h1>
+      <br>
+      <button class="btn btn-default" (click)="iamredwedding()">I am redwedding</button>
+      <button class="btn btn-default" (click)="iamyellowolf()">I am yellowolf</button>
+      <button class="btn btn-default" (click)="iamgreyjoy()">I am greyjoy</button>
+      <hr>
       <svg
 	xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 1366 768" xml:space="preserve">
 	<style type="text/css">
@@ -94,6 +135,11 @@
 		<rect [style.fill]="getWarning()" x="111.8" y="398.4" pointer-events="none" class="st11" width="19.4" height="68.1"/>
 	</g>-->
   <g>
+    <g>
+		<rect  x="15" y="398.4" pointer-events="none" class="st14" width="139.3" height="68.1"/>
+		<path  pointer-events="none" class="st14" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>
+		<rect  x="111.8" y="398.4" pointer-events="none" class="st14" width="19.4" height="68.1"/>
+    </g>
     <g *ngIf="greyjoy">
 		<rect  x="15" y="398.4" pointer-events="none" class="st14" width="139.3" height="68.1"/>
 		<path  pointer-events="none" class="st14" d="M150.5 409.6v45.7c0 2.4-1.7 4.4-3.9 4.4h-23.2c-2.1 0-3.9-2-3.9-4.4v-45.7c0-2.4 1.7-4.4 3.9-4.4h23.2C148.7 405.2 150.5 407.2 150.5 409.6z"/>

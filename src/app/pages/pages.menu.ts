@@ -264,7 +264,7 @@ export const PAGES_MENU = [
           }
         ]
       },*/
-      {
+      /*{
         path: '',
         data: {
           menu: {
@@ -293,7 +293,7 @@ export const PAGES_MENU = [
             }
           }
         ]
-      },
+      },*/
       {
         path: '',
         data: {
@@ -337,7 +337,7 @@ export const PAGES_MENU = [
           }
         ]
       },
-      {
+/*      {
         path: '',
         data: {
           menu: {
@@ -348,7 +348,7 @@ export const PAGES_MENU = [
             target: '_blank'
           }
         }
-      }
+      }*/
     ]
   }
 ];

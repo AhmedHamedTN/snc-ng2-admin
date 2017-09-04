@@ -1,11 +1,12 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppTranslationModule } from '../../app.translation.module';
 import { NgaModule } from '../../theme/nga.module';
 
 import { Dashboard } from './dashboard.component';
-import { routing }       from './dashboard.routing';
+import { routing } from './dashboard.routing';
+
 
 import { PopularApp } from './popularApp';
 import { PieChart } from './pieChart';
@@ -22,6 +23,10 @@ import { PieChartService } from './pieChart/pieChart.service';
 import { TodoService } from './todo/todo.service';
 import { TrafficChartService } from './trafficChart/trafficChart.service';
 import { UsersMapService } from './usersMap/usersMap.service';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { APP_BASE_HREF } from '@angular/common';
+
+declare var require: any;
 
 @NgModule({
   imports: [
@@ -29,7 +34,8 @@ import { UsersMapService } from './usersMap/usersMap.service';
     FormsModule,
     AppTranslationModule,
     NgaModule,
-    routing
+    NgxChartsModule,
+    routing,
   ],
   declarations: [
     PopularApp,
@@ -40,7 +46,7 @@ import { UsersMapService } from './usersMap/usersMap.service';
     Feed,
     Todo,
     Calendar,
-    Dashboard
+    Dashboard,
   ],
   providers: [
     CalendarService,
@@ -49,7 +55,8 @@ import { UsersMapService } from './usersMap/usersMap.service';
     PieChartService,
     TodoService,
     TrafficChartService,
-    UsersMapService
-  ]
+    UsersMapService,
+    { provide: APP_BASE_HREF, useValue: '/' },
+  ],
 })
 export class DashboardModule {}
